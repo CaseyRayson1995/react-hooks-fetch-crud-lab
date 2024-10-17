@@ -1,4 +1,3 @@
-// QuestionForm.js
 import React, { useState } from "react";
 
 function QuestionForm({ onAddQuestion }) {
@@ -21,7 +20,7 @@ function QuestionForm({ onAddQuestion }) {
   async function handleSubmit(event) {
     event.preventDefault();
     
-    // Format the data for API
+    
     const questionData = {
       prompt: formData.prompt,
       answers: [
@@ -44,8 +43,8 @@ function QuestionForm({ onAddQuestion }) {
 
       if (response.ok) {
         const newQuestion = await response.json();
-        onAddQuestion(newQuestion); // Update questions in App
-        setFormData({ // Reset the form
+        onAddQuestion(newQuestion); 
+        setFormData({ 
           prompt: "",
           answer1: "",
           answer2: "",

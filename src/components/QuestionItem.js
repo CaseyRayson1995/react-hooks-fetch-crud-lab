@@ -1,4 +1,3 @@
-// QuestionItem.js
 import React from "react";
 
 function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion }) {
@@ -11,12 +10,12 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion }) {
   ));
 
   function handleDelete() {
-    onDeleteQuestion(id); // Call delete function passed down from App
+    onDeleteQuestion(id); 
   }
 
   function handleChange(event) {
     const newCorrectIndex = parseInt(event.target.value);
-    onUpdateQuestion(id, newCorrectIndex); // Call update function passed down from App
+    onUpdateQuestion(id, newCorrectIndex); 
   }
 
   return (

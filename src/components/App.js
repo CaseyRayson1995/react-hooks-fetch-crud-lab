@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from "react";
 import AdminNavBar from "./AdminNavBar";
 import QuestionForm from "./QuestionForm";
@@ -26,7 +25,7 @@ function App() {
     setQuestions((prevQuestions) => [...prevQuestions, newQuestion]);
   }
 
-  // Function to delete a question
+
   function deleteQuestion(id) {
     fetch(`http://localhost:4000/questions/${id}`, { method: "DELETE" })
       .then((response) => {
@@ -39,7 +38,7 @@ function App() {
       .catch((error) => console.error("Error deleting question:", error));
   }
 
-  // Function to update a question's correct answer
+  
   function updateQuestion(id, correctIndex) {
     fetch(`http://localhost:4000/questions/${id}`, {
       method: "PATCH",
@@ -67,8 +66,8 @@ function App() {
       ) : (
         <QuestionList 
           questions={questions} 
-          onDeleteQuestion={deleteQuestion} // Pass delete function to QuestionList
-          onUpdateQuestion={updateQuestion} // Pass update function to QuestionList
+          onDeleteQuestion={deleteQuestion} 
+          onUpdateQuestion={updateQuestion} 
         />
       )}
     </main>

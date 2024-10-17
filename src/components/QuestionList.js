@@ -1,8 +1,7 @@
-// QuestionList.js
 import React from "react";
 import QuestionItem from "./QuestionItem";
 
-function QuestionList({ questions, onDeleteQuestion, onUpdateQuestion }) { // Receive props for delete and update functions
+function QuestionList({ questions, onDeleteQuestion, onUpdateQuestion }) { 
   return (
     <section>
       <h1>Quiz Questions</h1>
@@ -11,8 +10,8 @@ function QuestionList({ questions, onDeleteQuestion, onUpdateQuestion }) { // Re
           <QuestionItem 
             key={question.id} 
             question={question} 
-            onDeleteQuestion={onDeleteQuestion} // Pass delete function to QuestionItem
-            onUpdateQuestion={onUpdateQuestion} // Pass update function to QuestionItem
+            onDeleteQuestion={onDeleteQuestion} 
+            onUpdateQuestion={onUpdateQuestion} 
           />
         ))}
       </ul>
